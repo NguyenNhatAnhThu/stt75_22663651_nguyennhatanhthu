@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        #container {
+            height: 400px;
+            width: 700px;
+            display: grid;
+            grid-template-areas: "header header" "nav nav" "section aside" "footer footer";
+            grid-gap: 10px;
+            margin: auto;
+        }
+        
+        header {
+            height: 100px;
+            width: 700px;
+            background-color: rgb(163, 28, 161);
+            grid-area: header;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            align-content: center;
+            color: white;
+            border: 2px solid black;
+        }
+        
+        nav {
+            height: 30px;
+            width: 680px;
+            background-color: rgb(211, 226, 45);
+            grid-area: nav;
+            padding: 10px;
+            text-align: center;
+            align-content: center;
+            margin-top: 10px;
+            color: black;
+            border: 2px solid black;
+        }
+        
+        footer {
+            height: 100px;
+            width: 700px;
+            background-color: rgb(109, 109, 175);
+            grid-area: footer;
+            padding: 10px;
+            margin: 10px;
+            align-content: center;
+            text-align: center;
+            color: white;
+            border: 2px solid black;
+        }
+        
+        section {
+            height: 200px;
+            width: 450px;
+            background-color: blue;
+            grid-area: section;
+            padding: 10px;
+            margin-left: 20px;
+            text-align: center;
+            color: white;
+            border: 2px solid black;
+        }
+        
+        aside {
+            height: 200px;
+            width: 180px;
+            background-color: blueviolet;
+            grid-area: aside;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            border: 2px solid black;
+        }
+        
+        article {
+            height: 50px;
+            width: auto;
+            background-color: rgb(122, 122, 46);
+            grid-area: article;
+            padding: 10px;
+            color: white;
+            margin: 10px;
+            text-align: center;
+            align-content: center;
+            border: 2px solid black;
+        }
+        
+        .new-section {
+            height: 50px;
+            width: auto;
+            background-color: brown;
+            grid-area: new;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            align-content: center;
+            color: white;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <header>
+            <h1>Header</h1>
+            <nav>
+                <h1> Menu</h1>
+            </nav>
+        </header>
+        <section>
+            <h1> Section</h1>
+            <article>
+                <h2>Bài viết 1</h2>
+            </article>
+            <article>
+                <h2>Bài viết 2</h2>
+            </article>
+        </section>
+
+        <aside>
+            <h1>Aside</h1>
+            <div class="new-section">
+                <h1>Phần thứ 1</h1>
+            </div>
+            <div class="new-section">
+                <h1>Phần thứ 2</h1>
+            </div>
+        </aside>
+        <footer>
+            <h1> Footer</h1>
+        </footer>
+    </div>
+
+</body>
+
+</html>
