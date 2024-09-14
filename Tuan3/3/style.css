@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+}
+
+.header {
+    position: relative;
+    background-color: rgb(172, 75, 22);
+}
+
+.header-text {
+    padding: 10px;
+    color: rgb(162, 173, 44);
+    font-size: 35px;
+}

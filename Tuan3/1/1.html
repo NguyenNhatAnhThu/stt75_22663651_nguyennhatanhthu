@@ -12,20 +12,73 @@
     <div class="wrapper">
         <header>
             <div class="menu">
-                <p>Home</p>
-                <p>Products</p>
-                <p>Services</p>
-                <p>About</p>
-                <p>Contact</p>
-                <h2>Sky World</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <p>Sky World</p>
             </div>
         </header>
         <div class="content">
             <div class="left">
-
+                <div class="title">
+                    <p>Registration information</p>
+                </div>
+                <div class="text">
+                    <p>Start your travel planning now with our on-line tour regstration form. Just tell us a little about yourself and your group and one of our travel experts will contact you to create the perfect custom built for your group's needs.</p>
+                </div>
+                <form action="">
+                    <table>
+                        <tr>
+                            <td><label for="title">Title</label></td>
+                            <td>
+                                <select name="title" id="title">
+                                    <option value="mr">Mr.</option>
+                                    <option value="ms">Ms.</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="fullname">Full Name*</label></td>
+                            <td><input type="text" id="fullname" placeholder="Frist Name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="mail">Mailing Address</label></td>
+                            <td><input type="text" id="mail" placeholder="Mailing Address"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">City</label></td>
+                            <td><input type="text" id="city" placeholder="City"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="country">Country</label></td>
+                            <td><input type="text" id="country" placeholder="Country"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="question" for="question">Specific question or requests about your tour</label></td>
+                            <td><textarea name="question" id="question">Specific question or requests about your tour</textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button id="submit">Submit</button>
+                                <button id="reset">Reset</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
             </div>
-            <div class="right">
-
+            <div class="rights">
+                <div class="picture">
+                    <img src="Images/sky.png" alt="">
+                    <h1>You've arrived.</h1>
+                    <p>Journeys as great as the destination.</p>
+                </div>
             </div>
         </div>
         <footer>
