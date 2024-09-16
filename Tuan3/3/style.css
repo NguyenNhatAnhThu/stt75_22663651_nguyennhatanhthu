@@ -6,15 +6,43 @@
 
 .container {
     margin: auto;
+    width: 842px;
 }
 
 .header {
     position: relative;
-    background-color: rgb(172, 75, 22);
+    background-color: #F2CA99;
+    border-bottom: 2px solid black;
 }
 
 .header-text {
-    padding: 10px;
-    color: rgb(162, 173, 44);
+    padding: 20px;
+    color: #D95204;
     font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: -4px -4px 4px #F29F05;
+}
+
+nav {
+    border-bottom: 3px solid gray;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 10px 30px;
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 17px;
+    color: brown;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid brown;
 }
