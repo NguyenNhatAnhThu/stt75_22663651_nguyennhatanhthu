@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="/Tuan5/css/bootstrap.min.css">
+    <script src="/Tuan5/js/jquery-3.7.1.min.js"></script>
+    <script src="/Tuan5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/Tuan5/icon/css/all.min.css">
+    <style>
+        .container-fluid {
+            background-color: rgb(35,39,48);
+            height: 730px;
+        }
+        i {
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Căn giữa các phần tử trong navbar */
+            align-items: center; /* Căn giữa theo trục dọc */
+            width: 100%;
+        }
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Căn giữa các mục menu */
+        }
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand {
+            margin-right: auto; /* Đẩy brand về phía trái */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: black;">
+                <a href="home.html" class="navbar-brand ms-3 me-5">Feane</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="home.html">HOME</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="menu.html">MENU</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="book.html">BOOK TABLE</a>
+                        </li>
+                    </ul>
+                    <div class="icon me-5">
+                        <i class="fa-solid fa-user me-3"></i>
+                        <i class="fa-solid fa-cart-shopping me-3"></i>
+                        <i class="fa-solid fa-magnifying-glass me-3"></i>
+                        <button class="btn btn-warning rounded-button" style="color: white;" data-bs-toggle="modal" data-bs-target="#mymodal">ORDER NOW</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="modal" id="mymodal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-warning">Order</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="was-validated">
+                            <label for="phone" class="form-label mb-2">Telephone</label>
+                            <input type="tel" class="form-control mb-2" id="phone" placeholder="Enter your phone number" required>
+                            <label for="email" class="form-label mb-2">Email</label>
+                            <input type="email" class="form-control mb-2" id="email" placeholder="Enter your email" required>
+                            <input type="checkbox" class="form-check-input" id="checkmeout">Check me out
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-warning" type="submit" data-bs-dismiss="modal">Order</button>
+                        <button class="btn btn-warning" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 80px;">
+            <div class="col-5">
+                <img src="/Tuan5/images/about-img.png" alt="" width="400px" height="auto" style="float: right;">
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <h2 style=" color: white; margin-top: 130px; margin-left: 100px; margin-bottom: 20px;">We are Feane</h2>
+                </div>
+                <div class="row">
+                    <p style="color: white; width: 500px; margin-left: 100px; margin-bottom: 20px;">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All</p>
+                </div>
+                <div class="row">
+                    <button class="btn btn-warning rounded-button w-auto" style="color: white; margin-left: 110px;">Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

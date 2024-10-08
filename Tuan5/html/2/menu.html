@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="/Tuan5/css/bootstrap.min.css">
+    <script src="/Tuan5/js/jquery-3.7.1.min.js"></script>
+    <script src="/Tuan5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/Tuan5/icon/css/all.min.css">
+    <style>
+        i {
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Căn giữa các phần tử trong navbar */
+            align-items: center; /* Căn giữa theo trục dọc */
+            width: 100%;
+        }
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Căn giữa các mục menu */
+        }
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand {
+            margin-right: auto; /* Đẩy brand về phía trái */
+        }
+        ul li {
+            list-style-type: none;
+        }
+        ul li a {
+            margin: 0 20px;
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+        ul li a:hover {
+            color: white;
+            background-color: black;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: black;">
+                <a href="home.html" class="navbar-brand ms-3 me-5">Feane</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="home.html">HOME</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="menu.html">MENU</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="book.html">BOOK TABLE</a>
+                        </li>
+                    </ul>
+                    <div class="icon me-5">
+                        <i class="fa-solid fa-user me-3"></i>
+                        <i class="fa-solid fa-cart-shopping me-3"></i>
+                        <i class="fa-solid fa-magnifying-glass me-3"></i>
+                        <button class="btn btn-warning rounded-button" style="color: white;" data-bs-toggle="modal" data-bs-target="#mymodal">ORDER NOW</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="modal" id="mymodal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-warning">Order</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="was-validated">
+                            <label for="phone" class="form-label mb-2">Telephone</label>
+                            <input type="tel" class="form-control mb-2" id="phone" placeholder="Enter your phone number" required>
+                            <label for="email" class="form-label mb-2">Email</label>
+                            <input type="email" class="form-control mb-2" id="email" placeholder="Enter your email" required>
+                            <input type="checkbox" class="form-check-input" id="checkmeout">Check me out
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-warning" type="submit" data-bs-dismiss="modal">Order</button>
+                        <button class="btn btn-warning" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <h3 class="text-center" style="margin-top: 50px;">Our menu</h3>
+            </div>
+            <div class="row">
+                <ul class="d-flex justify-content-center mt-3">
+                    <li><a href="#">All</a></li>
+                    <li><a href="#">Bugger</a></li>
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">Pasta</a></li>
+                    <li><a href="#">Fries</a></li>
+                </ul>
+            </div>     
+        </div>
+        <div class="row mt-3 justify-content-center align-items-center">
+            <div class="col-4" style="margin-left: 200px;">
+                <div class="card bg-dark" style="width:300px; height: auto;">
+                    <img class="card-img-top p-5" src="/Tuan5/images/f1.png" alt="Card image" style="width:100%; height: 300px; background-color: white; border-bottom-left-radius: 40px;">
+                    <div class="card-body bg-dark text-light">
+                      <h4 class="card-title">Delicious Pizza</h4>
+                      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                      $17                     
+                      <i class="fa-solid fa-cart-shopping me-3 bg-warning" style=" padding: 10px; border-radius: 20px; float: right;"></i>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4" style="margin-left: -100px;">
+                <div class="card bg-dark" style="width:300px; height: auto;">
+                    <img class="card-img-top p-5" src="/Tuan5/images/f2.png" alt="Card image" style="width:100%; height: 300px; background-color: white; border-bottom-left-radius: 40px;">
+                    <div class="card-body bg-dark text-light">
+                      <h4 class="card-title">Delicious Burger</h4>
+                      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                      $17                     
+                      <i class="fa-solid fa-cart-shopping me-3 bg-warning" style=" padding: 10px; border-radius: 20px; float: right;"></i>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4" style="margin-left: -100px;">
+                <div class="card bg-dark" style="width:300px; height: auto;">
+                    <img class="card-img-top p-5" src="/Tuan5/images/f3.png" alt="Card image" style="width:100%; height: 300px; background-color: white; border-bottom-left-radius: 40px;">
+                    <div class="card-body bg-dark text-light">
+                      <h4 class="card-title">Delicious Pizza</h4>
+                      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                      $17                     
+                      <i class="fa-solid fa-cart-shopping me-3 bg-warning" style=" padding: 10px; border-radius: 20px; float: right;"></i>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
