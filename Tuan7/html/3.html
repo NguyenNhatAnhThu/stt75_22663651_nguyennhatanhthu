@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+        }
+        
+        td {
+            border: 1px solid black;
+        }
+        
+        .a {
+            width: 40%;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>THÔNG TIN ĐĂNG KÍ</h2>
+        <table>
+            <tr>
+                <td class="a">Họ và tên(*):</td>
+                <td>
+                    <input type="text" name="" id="hoTen">
+                    <span id="tbHoTen"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Tên đăng nhập(*):</td>
+                <td>
+                    <input type="text" name="" id="dangNhap">
+                    <span id="tbDangNhap"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Mật khẩu(*):</td>
+                <td>
+                    <input type="text" name="" id="matKhau">
+                    <span id="tbMatKhau"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Xác nhận mật khẩu(*):</td>
+                <td>
+                    <input type="text" name="" id="xacNhan">
+                    <span id="tbXacNhan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Ngày sinh:</td>
+                <td>
+                    <input type="date" name="" id="ngaySinh">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Điện thoại:</td>
+                <td>
+                    <input type="text" name="" id="soDienThoai">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Địa chỉ:</td>
+                <td>
+                    <input type="text" name="" id="diaChi">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Email khác:</td>
+                <td>
+                    <input type="text" name="" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Sở thích:</td>
+                <td>
+                    <select name="" id="soThich">
+                        <option value="Ca Nhạc">Ca nhạc</option>
+                        <option value="Mỹ Thuật">Mỹ thuật</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="dangKy" type="button">Đăng ký</button>
+                    <button id="huy" type="button">Hủy</button>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <h1>Thông tin bạn đã đăng kí</h1>
+            Họ và tên: <span id="outHoTen"></span><br> Tên đăng nhập: <span id="outTenDangNhap"></span><br> Mật khẩu: <span id="outMatKhau"></span><br> Ngày sinh: <span id="outNgaySinh"></span><br> Điện thoại: <span id="outDienThoai"></span><br> Địa chỉ:
+            <span id="outDiaChi"></span><br> Email: <span id="outEmail"></span><br> Sở thích: <span id="outSoThich"></span><br>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+    var check1 = false;
+    var check2 = false;
+    var check3 = false;
+    var check4 = false;
+    $('#hoTen').on('input', function() {
+        var hoTen = $(this).val();
+        var regex = /^([A-Z][a-z]*)*([A-Z][a-z]*)$/;
+        if (!regex.test(hoTen)) {
+            $('#tbHoTen').text("Họ tên phải bắt đầu chữ hoa");
+            check1 = false;
+        } else {
+            $('#tbHoTen').text("");
+            check1 = true;
+        }
+    });
+
+    $('#dangNhap').on('input', function() {
+        var dangNhap = $(this).val();
+        var regex = /^[A-Za-z\s]{6,}$/;
+        if (!regex.test(dangNhap)) {
+            $('#tbDangNhap').text("Tên đăng nhập phải trên 6 kí tự");
+            check2 = false;
+        } else {
+            $('#tbDangNhap').text("");
+            check2 = true;
+        }
+    });
+
+    $('#matKhau').on('input', function() {
+        var matKhau = $(this).val();
+        var regex = /[A-Za-z0-9]+/;
+        if (!regex.test(matKhau)) {
+            $('#tbMatKhau').text("Không chứa khoảng trắng và ký tự đặc biệt");
+            check3 = false;
+        } else {
+            $('#tbMatKhau').text("");
+            check3 = true;
+        }
+    });
+
+    $('#xacNhan').on('input', function() {
+        var xNMK = $(this).val();
+        var matKhau = $('#matKhau').val();
+        if (!(xNMK === matKhau)) {
+            $('#tbXacNhan').text("Xác nhận mật khẩu phải trùng với mật khẩu");
+            check4 = false;
+        } else {
+            $('#tbXacNhan').text("");
+            check4 = true;
+        }
+    });
+
+    $("#dangKy").click(function() {
+        var ten = $("#hoTen").val();
+        var login = $('#dangNhap').val();
+        var mk = $('#matKhau').val();
+        var date = $('#ngaySinh').val();
+        var dienThoai = $('#soDienThoai').val();
+        var diaChi = $('#diaChi').val();
+        var email = $('#email').val();
+        var soThich = $('#soThich').val();
+        if (check1 && check2 && check3 && check4) {
+            $("#outHoTen").text(ten);
+            $('#outDangNhap').text(login);
+            $('#outMatKhau').text(mk);
+            $('#outNgaySinh').text(date);
+            $('#outSoDienThoai').text(dienThoai);
+            $('#outDiaChi').text(diaChi);
+            $('#outEmail').text(email);
+            $('#outSoThich').text(soThich);
+        } else {
+            alert('Vui lòng nhập đầy đủ thông tin ở phần có (*)');
+        }
+    });
+});
+    </script>
+</body>
+
+</html>
